@@ -26,7 +26,7 @@ public class MetodosAlumnos {
        int suspensos=0;
        int media=0;
        int nalta=0;
-       
+   
        for (int i=0;i<notas.length;i++){
             if (notas[i]>5){ aprobados = aprobados +1; }
             if (notas[i]<5){ suspensos = suspensos +1; }
@@ -49,7 +49,26 @@ public class MetodosAlumnos {
         for (int i=0;i<notas.length;i++){
             if (nAlumnos[i].equalsIgnoreCase(pAlumno)) { System.out.println("El alumno "+nAlumnos[i] + " tiene de nota "+notas[i]); }
         }
-    
+        System.out.println("\nOrdenamos a los alumnos por nota");
+        for (int i=0;i<(notas.length-1);i++){
+            int aux1=0;
+            String aux2;
+            if (notas[i]>notas[i+1]){
+                aux1 = notas[i+1];
+                aux2 = nAlumnos[i+1];
+                
+                notas[i+1]=notas[i];
+                nAlumnos[i+1]=nAlumnos[i];
+                
+                notas[i]=aux1;
+                nAlumnos[i]=aux2;
+            }
+        }
+        
+        for (int i=0;i<notas.length;i++){
+            System.out.print(nAlumnos[i] +":"+notas[i]+", ");
+            contador++;
+        }
         
    }
 }
