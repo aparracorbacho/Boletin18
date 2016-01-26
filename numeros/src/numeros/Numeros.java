@@ -21,9 +21,15 @@ public class Numeros {
         for (int i=0;i<numeros.length;i++){
             numeros[i]=(int)(Math.random()*50+1);            
         }
-       for (int i=(numeros.length-1);i>=0;i--){
-           System.out.println(numeros[i]);            
+        System.out.println("El array al derecho");
+       for (int i=0;i<numeros.length;i++){
+           System.out.print(" " +numeros[i]);            
        }
+       System.out.println("\nEl array al reves");
+       for (int i=(numeros.length-1);i>=0;i--){
+           System.out.print(" " +numeros[i]);            
+       }
+       System.out.println();
     }
     
 }
