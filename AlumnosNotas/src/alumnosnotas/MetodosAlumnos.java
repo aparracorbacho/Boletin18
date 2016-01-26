@@ -67,7 +67,6 @@ public class MetodosAlumnos {
         
         for (int i=0;i<notas.length;i++){
             System.out.print(nAlumnos[i] +":"+notas[i]+", ");
-            contador++;
         }
         
    }
